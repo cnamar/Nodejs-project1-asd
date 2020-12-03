@@ -2,14 +2,18 @@
 <div class="top">
 <div class="loginbox">  
     <center><h1 style="color:blueviolet">Owners Login</h1></center>
-    <FORM Name="form1" method="POST" align="center" action="/">     
+    <FORM Name="form1" method="POST" align="center" action="/login">     
         <input type="text" Name="name" class="login">
         <input type="password" Name="pass" class="login">
         <input type="submit" value="Submit" id="submit" >
     </FORM>
 </div>
-
-
+<div class="searchbox">
+<FORM Name="form2" method="POST" action="/searchresult">
+    <input type="text" Name="searchname" class="searchin" style="width:160px" placeholder="search for a movie">
+    <input type="submit" value="search" id="searchsubmit" style="height:30px">
+    </FORM>
+</div>
 </div>
 
     <script type="text/javascript" src="/javascripts/pagescript.js"></script>

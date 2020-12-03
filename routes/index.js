@@ -34,7 +34,40 @@ queryWrapper(query3)
    res.render('index',{values1,values2,values3});
   }
 );
+});
+router.post('/searchresult',function(req,res,next){
+  
+   var query="SELECT * FROM Show_timings NATURAL JOIN Movies NATURAL JOIN Theatres NATURAL JOIN Screens";
+   Promise.all(
+     [queryWrapper(query)
+    ]).then(function([values]){
+       var j=0;
+       var movie=[];
+       for(var i=0;i<values.length;i++)
+       {
+         if(values[i].Movie_Name.toLowerCase()===req.body.searchname.toLowerCase())
+         {
+          movie.push(values[i]);
+         }
+       }
+       var dat=new Date();
+       var s=dat.getDate()+"-"+dat.getMonth()+"-"+dat.getFullYear();
+       console.log(movie);
+       if(movie.length!=0)
+       {
+        res.render('frames/movieframes/movieframes',{movie,s});
+       }
+       else
+       {
+        res.render('frames/searcherror');
+       }
+    });
+  
 
+});
+router.post('/login',function(req,res,next){
+  
+});
  
 /* connection.query("SELECT * FROM Movies",function(err,rows,fields){
     
@@ -59,7 +92,7 @@ queryWrapper(query3)
  
 
  
-});
+
 
 
 

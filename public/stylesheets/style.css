@@ -18,7 +18,7 @@ a {
   margin-top: 0%;
   height:40%;
   width:100%;
-  background-image: url('../images/background.png');
+  background-image: url('../images/backgroundtest.jpeg');
   background-size: 100% 150%;
 }
 .loginbox{
@@ -128,4 +128,9 @@ a.linkframe:hover{
   margin-top:120px;
   margin-left:300px;
   font-weight: 900;
+}
+.searchbox{
+  margin-top:250px;
+  margin-left: 50px;
+  position:absolute;
 }
