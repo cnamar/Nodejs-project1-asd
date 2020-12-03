@@ -1,0 +1,35 @@
+<div class="movieframe">
+<div class="movietitle">
+  {{movie.[1].Movie_Name}}
+</div>
+<div class="moviedetails">
+Directed by :{{movie.[1].Director_Name}}<br>
+Produced by :{{movie.[1].Producer_Name}}<br>
+Distribution :{{movie.[1].Distributor_Name}}<br>
+Starring:{{movie.[1].major_cast}}
+</div>
+
+<div class="theatrelist">
+    <table border="2" bordercolor="white" cellpadding="0" cellspacing="0" height="1000" width="800">
+       <tr>
+           <th colspan="4">Show details as on {{s}}</th>
+       </tr>
+        <tr>
+            <th>Theatre Name</th>
+            <th>Screen No</th>
+            <th>Screen Name</th>
+            <th>Show Time</th>
+        </tr>
+        {{#each movie}}
+        <tr align="center" border="2">
+        <td><a class="linkframe" href="/theatreframe/{{this.Theatre_id}}">
+        <font Size="3">{{this.Theatre_Name}}</font></a></td>
+        <td>{{this.Screen_id}}</td>
+        <td>{{this.Screen_Name}}</td>
+         <td>{{this.Time}} {{this.Indication}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+
+</div>

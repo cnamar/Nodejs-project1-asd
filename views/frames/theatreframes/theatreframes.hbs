@@ -1,0 +1,96 @@
+<div class="movieframe">
+<div class="movietitle">
+  {{theatre1.[1].Theatre_Name}}
+</div>
+<div class="moviedetails">
+{{theatre2.[0].Division}},
+{{theatre2.[0].Local_Body}}<br>
+{{theatre2.[0].District}}<br>
+Contact No:{{theatre2.[0].Contact_No}}
+</div>
+<div class="theatredetails">
+  <table border="2" bordercolor="white" cellpadding="0" cellspacing="0" height="400" width="600">
+   <tr>
+     <th colspan="4">
+       Screen details
+     </th>
+   </tr>
+    <tr>
+      <th>
+        ScreenNo
+      </th>
+      <th>
+        Screen Name
+      </th>
+      <th>
+        Class Name
+      </th>
+      <th>
+        Ticket cost
+      </th>
+    </tr>
+    {{#each theatre2}}
+    <tr align="center" border="2">
+      <td>
+        {{this.Screen_id}}
+      </td>
+      <td>
+        {{this.Screen_Name}}
+      </td>
+      <td>
+        {{this.Class_Name}}
+      </td>
+      <td>
+        {{this.Cost}}
+      </td>
+    </tr>
+
+    {{/each}}
+    </table>
+</div>
+  
+<div class="showdetails">
+
+  <table border="2" bordercolor="white" cellpadding="0" cellspacing="0" height="400" width="600">
+  <tr>
+    <th colspan="3">Show details as on {{s}}</th>
+  </tr>
+  <tr>
+  <th>
+    Screen Name
+  </th>
+  <th>
+    Show time
+  </th>
+  <th>
+    Movie
+  </th>
+  </tr>
+  {{#each theatre1}}
+  <tr align="center" border="2">
+  <td>
+    {{this.Screen_Name}}
+  </td>
+  <td>
+    {{this.Time}} {{this.Indication}}
+  </td>
+ <td>
+   <a class="linkframe" href="/movieframe/{{this.Movie_id}}">
+   <font Size="3">
+        {{this.Movie_Name}}
+   </font>
+   </a>
+ </td>
+ 
+  </tr>
+  {{/each}}
+  </table>
+
+
+</div>
+
+
+
+
+
+</div>

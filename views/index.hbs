@@ -1,0 +1,76 @@
+<div class="main-div">
+<div class="top">
+<div class="loginbox">  
+    <center><h1 style="color:blueviolet">Owners Login</h1></center>
+    <FORM Name="form1" method="POST" align="center" action="/">     
+        <input type="text" Name="name" class="login">
+        <input type="password" Name="pass" class="login">
+        <input type="submit" value="Submit" id="submit" >
+    </FORM>
+</div>
+
+
+</div>
+
+    <script type="text/javascript" src="/javascripts/pagescript.js"></script>
+
+
+<div class="select">
+  <a class="button  bar-item" href="#" onclick="frame1()">movies</a>
+  <a class="button  bar-item" href="#" onclick="frame2()">Theatres</a>
+  <a class="button  bar-item" href="#" onclick="frame3()">upcoming</a>
+
+</div>
+
+<div class="frame1" id="frame1">
+<ul>  
+{{#each values1 as |value1|}}
+<div class="list1">
+<li ><a class="linkframe" href="/movieframe/{{value1.Movie_id}}">
+{{value1.Movie_Name}}</a></li><br>
+{{value1.Language}}<br>
+Direction:{{value1.Director_Name}}<br>
+Producer:{{value1.Producer_Name}}<br>
+Distribution:{{value1.Distributor_Name}}<br>
+Starring:{{value1.major_cast}}
+
+</div>
+
+{{/each}}
+</ul>
+
+</div>
+<div class="frame2" id="frame2">
+<ul>  
+{{#each values2 as |value2|}}
+<div class="list1">
+<li><a class="linkframe" href="/theatreframe/{{value2.Theatre_id}}">{{value2.Theatre_Name}}</a></li><br>
+{{value2.Division}},
+{{value2.Local_Body}}<br>
+{{value2.District}}<br>
+Contact No:{{value2.Contact_No}}
+
+</div>
+
+{{/each}}
+</ul>
+
+
+</div>
+<div class="frame3" id="frame3">
+<ul>  
+{{#each values3 as |value3|}}
+<div class="list1">
+<li ><font Size="5">{{value3.Movie_Name}}</font></li><br>
+{{value3.Language}}<br>
+Direction:{{value3.Director_Name}}<br>
+Producer:{{value3.Producer_Name}}<br>
+Distribution:{{value3.Distributor_Name}}<br>
+Starring:{{value3.major_cast}}
+
+</div>
+
+{{/each}}
+</ul>
+</div>
+</div>

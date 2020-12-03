@@ -1,0 +1,131 @@
+body {
+  padding: 0px;
+  margin:0px;
+  background:yellow;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: white;
+  
+  padding:10px 15px 9px 15px;
+}
+.main-div{
+  height:1000px;
+  width:1300px;
+}
+.top{
+  margin-top: 0%;
+  height:40%;
+  width:100%;
+  background-image: url('../images/background.png');
+  background-size: 100% 150%;
+}
+.loginbox{
+height:230px;
+width:20%;
+background:pink;
+margin-left:78%;
+margin-top:60px;
+padding-top:20px;
+border:3px solid;
+border-color: yellowgreen;
+position:absolute;
+}
+.login{
+  background:white;
+  margin:10px;
+}
+#submit{
+  margin-top: 10px;
+  margin-left:30%;
+}
+.select{
+  background:steelblue;
+  width:100%;
+  height:50px;
+  color:white;
+}
+.bar-item{
+  float:left;
+  width:401px;
+  height:31px;
+  border:1px solid;
+  display:block;
+  outline:0;
+}
+.button{
+  overflow:hidden;
+  color:inherit;
+  background-color: inherit;
+  text-align:center;
+  cursor:pointer;
+}
+a:hover{
+  background:skyblue;
+}
+.frame1{
+  width:100%;
+  height:2000px;
+  background:tomato;
+  color:white;
+  display:visible;
+}
+.frame2{
+  width:100%;
+  height:2000px;
+  background:rosybrown;
+  color:white;
+  display:none;
+}
+.frame3{
+  width:100%;
+  height:2000px;
+  background:teal;
+  color: white;
+  display:none;
+}
+.list1{
+  margin-top:10px;
+  padding:10px;
+  font-size: 17px;
+}
+a.linkframe{
+    font-size:28px;
+    text-decoration: none;
+}
+a.linkframe:hover{
+  background:inherit;
+  color:aqua;
+}
+.movieframe{
+  background-image: url(../images/background2.jpg);
+  color:white;
+  height:2500px;
+  width:100%;
+  position:absolute;
+}
+.movietitle{
+  margin:30px;
+  font-size: 70px;
+  font-style: italic;
+}
+.theatrelist{
+  margin-top:60px;
+  margin-left: 100px;
+  font-weight: 900;
+}
+.moviedetails{
+  margin-left:30px;
+  font-weight:530;
+}
+.theatredetails{
+  margin-top:50px;
+  margin-left: 300px;
+  font-weight: 900;
+}
+.showdetails{
+  margin-top:120px;
+  margin-left:300px;
+  font-weight: 900;
+}
