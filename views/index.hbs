@@ -5,9 +5,11 @@
     <FORM Name="form1" method="POST" align="center" action="/login">     
         <input type="text" Name="name" class="login">
         <input type="password" Name="pass" class="login">
-        <input type="submit" value="Submit" id="submit" >
+        <input type="submit" value="Submit" id="submit">
     </FORM>
+    <div class="alert" align="center">{{msg}}</div>
 </div>
+
 <div class="searchbox">
 <FORM Name="form2" method="POST" action="/searchresult">
     <input type="text" Name="searchname" class="searchin" style="width:160px" placeholder="search for a movie">

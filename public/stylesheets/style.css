@@ -134,3 +134,7 @@ a.linkframe:hover{
   margin-left: 50px;
   position:absolute;
 }
+.alert{
+  color:red;
+  width:100%;
+}
