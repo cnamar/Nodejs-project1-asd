@@ -160,3 +160,32 @@ a.linkframe:hover{
   margin-left:1100px;
   margin-top: 50px;
 }
+.adminlogin{
+  background-image: url(../images/background2.jpg);
+  color:white;
+  height:4000px;
+  width:100%;
+  position:absolute;
+}
+.deleteconfirm2{
+  height:400;
+  width:600px;
+  display:none;
+}
+#logout2{
+  margin-left:1100px;
+  margin-top: 50px;
+}
+.deleteconfirm3{
+  height:400;
+  width:600px;
+  display:none;
+}
+#inserttheatre{
+  width: 40%;
+  margin-top:20px;
+  margin-left:320px;
+  height:240px ;
+  background:white;
+  display:none;
+}

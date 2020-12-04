@@ -25,7 +25,7 @@ const queryWrapper=function(statement){
 router.get('/', function(req, res, next) {
 
 var query1="SELECT * FROM Movies";
-var query2="SELECT * FROM Location NATURAL JOIN Theatres";
+var query2="SELECT * FROM Theatres";
 var query3="SELECT * FROM upcoming";
 Promise.all([
 queryWrapper(query1),
@@ -127,7 +127,7 @@ router.post('/login',function(req,res,next){
   function([values4,values5]){
     if(values4[0].username===username){
       if(values4[0].passwords===password){
-        res.render('portals/admin',{title});
+        res.redirect('/admin');
       }
       else
       {
