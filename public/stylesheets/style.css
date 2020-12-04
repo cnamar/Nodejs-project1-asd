@@ -138,3 +138,25 @@ a.linkframe:hover{
   color:red;
   width:100%;
 }
+.theatrelogin{
+  background-image: url(../images/background2.jpg);
+  color:white;
+  height:2500px;
+  width:100%;
+  position:absolute;
+}
+.logindetails{
+  margin-top:50px;
+  margin-left:30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.deleteconfirm{
+  height:400;
+  width:600px;
+  display:none;
+}
+#logout{
+  margin-left:1100px;
+  margin-top: 50px;
+}

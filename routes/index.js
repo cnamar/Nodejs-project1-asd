@@ -60,7 +60,22 @@ router.post('/searchresult',function(req,res,next){
        }
        else
        {
-        res.render('frames/searcherror');
+        var query1="SELECT * FROM Movies";
+        var query2="SELECT * FROM Location NATURAL JOIN Theatres";
+        var query3="SELECT * FROM upcoming";
+          
+        Promise.all([
+          queryWrapper(query1),
+          queryWrapper(query2),
+          queryWrapper(query3)
+         ]).then(
+           function([values1,values2,values3]){
+             var msg2="Movie not found";
+             res.render('index',{values1,values2,values3,msg2});
+             }
+           );
+   
+        
        }
     });
   

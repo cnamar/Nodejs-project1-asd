@@ -20,7 +20,6 @@ const queryWrapper=function(statement){
   });
 };
 router.get('/',function(req,res,next){
- console.log(req.query.id);
  var idme=req.query.id;
  var query1="SELECT * FROM Theatres NATURAL JOIN Show_timings NATURAL JOIN Screens NATURAL JOIN Location  NATURAL JOIN Movies";
  var query2="SELECT * FROM Classes NATURAL JOIN Theatres";
@@ -37,11 +36,27 @@ router.get('/',function(req,res,next){
     theatres.push(values1[i]);
   }
  }
- res.render('portals/login',{theatres,values2});
+ var dat=new Date();
+ var s=dat.getDate()+"-"+dat.getMonth()+"-"+dat.getFullYear();
+ res.render('portals/login',{theatres,values2,s});
  }
  );
 
 });
-
-
+router.post('/:id1/:id2/:id3',function(req,res,next){
+var idd1=req.params.id1;
+var idd2=req.params.id2;
+var idd3=req.params.id3;
+var query="DELETE FROM Show_timings WHERE (Theatre_id="+idd1+" && Screen_id="+idd2+" && Time='"+idd3+"')";
+Promise.all([
+queryWrapper(query)
+  ]).then(
+    function([values]){
+      res.redirect("/login?id="+idd1);
+    }
+  );
+});
+router.post('/logout',function(req,res,next){
+res.redirect("/");
+});
 module.exports = router;
