@@ -21,3 +21,10 @@ function showinsert1(){
 function unshowinsert1(){
     document.getElementById("inserttheatre").style["display"]="none";
 }
+function showinsert2(){
+    document.getElementById("insertmovie").style["display"]="block";
+    document.insertmovieform1.action="/admin/insert/movie";
+}
+function unshowinsert2(){
+    document.getElementById("insertmovie").style["display"]="none";
+}

@@ -75,12 +75,25 @@
   </div>
 <h1  style="margin:100px">Movies</h1>
 </div>
+<div align="center" id="insertmovie">
+    <br>
+    <form name="insertmovieform1" id="insertmovieform1" method="post">
+    <input type="text" Name="movieid" placeholder="Enter id to be given(Use a unique id not present in the table"><br><br>
+    <input type="text" Name="moviename" placeholder="Enter Movie name(It should be also unique"><br><br>
+    <input type="text" Name="directorname" placeholder="enter director"><br><br>
+    <input type="text" Name="producername" placeholder="enter producer"><br><br>
+    <input type="text" Name="distributorname" placeholder="enter distributor name"><br><br>
+    <input type="text" Name="language" placeholder="enter language"><br><br>
+    <input type="text" Name="moviecast" placeholder="Enter major cast(any2)"><br><br>
+    <input type="submit" value="submit" id="submitmovie" onclick="unshowinsert2()">
+    </form>
+</div>
 <div class="showdetails">
     <script Language="JavaScript" src="/javascripts/adminscript.js"></script>
      <table border="2" bordercolor="white" cellpadding="0" cellspacing="0" height="400" width="700">
      <tr>
          <th colspan="6" style="height:40px">Movies</th>
-         <th><button>Insert</button></th>
+         <th><button onclick="showinsert2()">Insert</button></th>
      </tr>
   
      <tr>

@@ -72,7 +72,7 @@ router.post("/insert/theatre",function(req,res,next){
   var pass=req.body.theatrepassword;
   if(id==""|| name=="" || mail=="" || contact=="" || user=="" || pass=="")
   {
-    res.send("empty values not allowed");
+    res.send("empty values are not allowed");
   }
   else
   {
@@ -115,6 +115,53 @@ router.post("/insert/theatre",function(req,res,next){
     );
   }
 });
-
+router.post('/insert/movie',function(req,res,next){
+var id=req.body.movieid;
+var name=req.body.moviename;
+var director=req.body.directorname;
+var producer=req.body.producername;
+var distributor=req.body.distributorname;
+var lang=req.body.language;
+var cast=req.body.moviecast;
+console.log(cast);
+if(id==="" || name==="" || director==="" || producer==="" || distributor==="" || lang==="")
+{
+  res.send("empty values are not allowed");
+}
+else{
+  var query1="SELECT * FROM Movies";
+  Promise.all(
+    [
+      queryWrapper(query1)
+    ]).then(
+     function([values1])
+     {
+       var m=0;
+       for(var i=0;i<values1.length;i++)
+       {
+         if(values1[i].Movie_id==id)
+         {
+          res.send("Not able to insert.Id should be unique");
+          m++;
+          break;
+         }
+       }
+       if(m==0)
+       {
+         var query2="INSERT INTO Movies VALUES("+id+",'"+name+"','"+director+"','"+producer+"','"+distributor+"','"+lang+"','"+cast+"')";
+         Promise.all(
+           [
+            queryWrapper(query2)
+           ]).then(
+            function([values2])
+            {
+              res.redirect('/admin');
+            }
+           );
+       }
+     }
+    );
+}
+});
 
 module.exports = router;
