@@ -98,7 +98,7 @@ router.post('/login',function(req,res,next){
   var username=req.body.name;
   var password=req.body.pass;
   var query1="SELECT * FROM Movies";
-  var query2="SELECT * FROM Location NATURAL JOIN Theatres";
+  var query2="SELECT * FROM Theatres";
   var query3="SELECT * FROM upcoming";
   if(username==="")
   {
