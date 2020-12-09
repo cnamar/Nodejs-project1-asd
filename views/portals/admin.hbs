@@ -1,0 +1,160 @@
+<div class="adminlogin">
+    <br>
+    <br>
+<div align="center" id="inserttheatre">
+    <br>
+    <form name="inserttheatreform1" id="inserttheatreform1" method="post">
+    <input type="text" Name="theatreid" placeholder="Enter id to be given(Use a unique id not present in the table"><br><br>
+    <input type="text" Name="theatrename" placeholder="Enter Theatre name(It should be also unique"><br><br>
+    <input type="text" Name="theatreemail" placeholder="enter theatre mail"><br><br>
+    <input type="text" Name="theatrecontact" placeholder="enter contact number"><br><br>
+    <input type="text" Name="theatreusername" placeholder="enter a unique username"><br><br>
+    <input type="password" Name="theatrepassword" placeholder="enter a secure password"><br><br>
+    <input type="submit" value="submit" id="submittheatre" onclick="unshowinsert1()">
+    </form>
+</div>
+<h1  style="margin:100px">Theatres</h1>
+<form Name="logout2" id="logout2" action="/login/logout" method="POST">
+<button  type="submit">logout</button>
+</form>
+<div class="showdetails">
+    <script Language="JavaScript" src="/javascripts/adminscript.js"></script>
+    
+     <table border="2" bordercolor="white" cellpadding="0" cellspacing="0" height="400" width="600">
+     <tr>
+         <th colspan="4" style="height:40px">Theatres</th>
+         <th><button onclick="showinsert1()">Insert</button></th>
+     </tr>
+  
+     <tr>
+         <th>
+             Theatre no
+         </th>
+         <th>
+             Theatre Name
+         </th>
+         <th>
+             Theatre Email
+         </th>
+         <th>
+             Contact No
+         </th>
+         <th>
+
+         </th>
+     </tr>
+     {{#each values1}}
+     <tr align="center" border="2">
+     <td>
+    {{this.Theatre_id}}
+     </td>
+  <td>
+    {{this.Theatre_Name}}
+  </td>
+ <td>
+   {{this.Theatre_email}}
+ </td>
+ <td>
+     {{this.Contact_No}}
+ </td>
+ <td>
+     <button id="inputdeletebutton{{this.Theatre_id}}" onclick="showconfirm2({{this.Theatre_id}})">
+         Delete
+     </button>
+ </td>
+ 
+  </tr> 
+    
+     {{/each}}
+     </table>
+     <div class="deleteconfirm2" id="deleteconfirm2">
+      confirm to delete
+      <form name="confirm2" id="confirm2" method="POST">
+          <input type="submit" value="confirm" id="confirmsubmit2" onclick="unshow2()">
+      </form>
+  </div>
+<h1  style="margin:100px">Movies</h1>
+</div>
+<div align="center" id="insertmovie">
+    <br>
+    <form name="insertmovieform1" id="insertmovieform1" method="post">
+    <input type="text" Name="movieid" placeholder="Enter id to be given(Use a unique id not present in the table"><br><br>
+    <input type="text" Name="moviename" placeholder="Enter Movie name(It should be also unique"><br><br>
+    <input type="text" Name="directorname" placeholder="enter director"><br><br>
+    <input type="text" Name="producername" placeholder="enter producer"><br><br>
+    <input type="text" Name="distributorname" placeholder="enter distributor name"><br><br>
+    <input type="text" Name="language" placeholder="enter language"><br><br>
+    <input type="text" Name="moviecast" placeholder="Enter major cast(any2)"><br><br>
+    <input type="submit" value="submit" id="submitmovie" onclick="unshowinsert2()">
+    </form>
+</div>
+<div class="showdetails">
+    <script Language="JavaScript" src="/javascripts/adminscript.js"></script>
+     <table border="2" bordercolor="white" cellpadding="0" cellspacing="0" height="400" width="700">
+     <tr>
+         <th colspan="6" style="height:40px">Movies</th>
+         <th><button onclick="showinsert2()">Insert</button></th>
+     </tr>
+  
+     <tr>
+         <th>
+             Movie no
+         </th>
+         <th>
+             Movie Name
+         </th>
+         <th>
+             Director
+         </th>
+         <th>
+             Producer
+         </th>
+         <th>
+          Distributor
+         </th>
+          
+         <th>
+          Language
+         </th>
+         <th>
+
+         </th>
+     </tr>
+     {{#each values2}}
+     <tr align="center" border="2">
+     <td>
+    {{this.Movie_id}}
+     </td>
+  <td>
+    {{this.Movie_Name}}
+  </td>
+ <td>
+   {{this.Director_Name}}
+ </td>
+ <td>
+     {{this.Producer_Name}}
+ </td>
+ <td>
+     {{this.Distributor_Name}}
+ </td>
+ <td>
+     {{this.Language}}
+ </td>
+ <td>
+     <button id="moviedeletebutton{{this.Movie_id}}" style="width:80px" onclick="showconfirm3({{this.Movie_id}})">
+         Delete
+     </button>
+ </td>
+ 
+  </tr> 
+    
+     {{/each}}
+     </table>
+     <div class="deleteconfirm3" id="deleteconfirm3">
+      confirm to delete
+      <form name="confirm3" id="confirm3" method="POST">
+          <input type="submit" value="confirm" id="confirmsubmit3" onclick="unshow3()">
+      </form>
+  </div>
+</div>
+</div>

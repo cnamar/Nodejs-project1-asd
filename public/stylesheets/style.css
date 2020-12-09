@@ -134,3 +134,93 @@ a.linkframe:hover{
   margin-left: 50px;
   position:absolute;
 }
+.alert{
+  color:red;
+  width:100%;
+}
+.theatrelogin{
+  background-image: url(../images/background2.jpg);
+  color:white;
+  height:2500px;
+  width:100%;
+  position:absolute;
+}
+.logindetails{
+  margin-top:50px;
+  margin-left:30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.deleteconfirm{
+  height:400;
+  width:600px;
+  display:none;
+}
+#logout{
+  margin-left:1100px;
+  margin-top: 50px;
+}
+.adminlogin{
+  background-image: url(../images/background2.jpg);
+  color:white;
+  height:4000px;
+  width:100%;
+  position:absolute;
+}
+.deleteconfirm2{
+  height:400;
+  width:600px;
+  display:none;
+}
+#logout2{
+  margin-left:1100px;
+  margin-top: 50px;
+}
+.deleteconfirm3{
+  height:400;
+  width:600px;
+  display:none;
+}
+#inserttheatre{
+  width: 40%;
+  margin-top:20px;
+  margin-left:320px;
+  height:350px ;
+  background:white;
+  display:none;
+}
+#insertmovie{
+  width: 40%;
+  margin-top:20px;
+  margin-left:320px;
+  height:400px ;
+  background:white;
+  display:none;
+}
+#showscreens{
+  margin-top:120px;
+  margin-left:300px;
+  font-weight: 900;
+}
+#insertscreen{
+  width: 40%;
+  margin-top:20px;
+  margin-left:380px;
+  height:150px ;
+  background:white;
+  display:none;
+}
+.deleteconfirm4{
+  height:400;
+  width:600px;
+  display:none;
+}
+#insertshows{
+  width: 40%;
+  margin-top:20px;
+  margin-left:380px;
+  height:150px ;
+  background:white;
+  color:black;
+  display:none;
+}

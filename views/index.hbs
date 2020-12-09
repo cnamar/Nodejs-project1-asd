@@ -5,14 +5,17 @@
     <FORM Name="form1" method="POST" align="center" action="/login">     
         <input type="text" Name="name" class="login">
         <input type="password" Name="pass" class="login">
-        <input type="submit" value="Submit" id="submit" >
+        <input type="submit" value="Submit" id="submit">
     </FORM>
+    <div class="alert" align="center">{{msg}}</div>
 </div>
+
 <div class="searchbox">
 <FORM Name="form2" method="POST" action="/searchresult">
     <input type="text" Name="searchname" class="searchin" style="width:160px" placeholder="search for a movie">
     <input type="submit" value="search" id="searchsubmit" style="height:30px">
     </FORM>
+    <div class="alert" align="center">{{msg2}}</div>
 </div>
 </div>
 
@@ -49,9 +52,7 @@ Starring:{{value1.major_cast}}
 {{#each values2 as |value2|}}
 <div class="list1">
 <li><a class="linkframe" href="/theatreframe/{{value2.Theatre_id}}">{{value2.Theatre_Name}}</a></li><br>
-{{value2.Division}},
-{{value2.Local_Body}}<br>
-{{value2.District}}<br>
+E-mail:{{value2.Theatre_email}}<br>
 Contact No:{{value2.Contact_No}}
 
 </div>
