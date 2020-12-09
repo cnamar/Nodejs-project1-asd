@@ -27,17 +27,20 @@ router.get('/', function(req, res, next){
 });
 router.get('/:id', function(req, res, next){
     var query1="SELECT * FROM Show_timings NATURAL JOIN Movies NATURAL JOIN Theatres NATURAL JOIN Screens";
-    var query2="SELECT * FROM Classes NATURAL JOIN Theatres NATURAL JOIN Screens NATURAL JOIN Location";
+    var query2="SELECT * FROM Classes NATURAL JOIN Theatres NATURAL JOIN Screens";
     var query3="SELECT * FROM Theatres";
+    var query4="SELECT * FROM Theatres NATURAL JOIN Location";
     Promise.all([
         queryWrapper(query1),
         queryWrapper(query2),
-        queryWrapper(query3)
-    ]).then(function([values1,values2,values3]){
+        queryWrapper(query3),
+        queryWrapper(query4)
+    ]).then(function([values1,values2,values3,values4]){
         var j=0;
         var theatre1=[];
         var theatre2=[];
         var theatre=[];
+        var theatreloc=[];
         for(var i=0;i<values1.length;i++)
         {
 
@@ -71,10 +74,21 @@ router.get('/:id', function(req, res, next){
          
 
         }
+        for(var i=0;i<values4.length;i++)
+        {
+
+            if(values4[i].Theatre_id==req.params.id){
+                theatreloc.push(values4[i]);
+               
+
+            }
+         
+
+        }
         console.log(theatre2);
         var dat=new Date();
         var s=dat.getDate()+"-"+dat.getMonth()+"-"+dat.getFullYear();
-        res.render('frames/theatreframes/theatreframes',{theatre,theatre1,theatre2,s});
+        res.render('frames/theatreframes/theatreframes',{theatre,theatre1,theatre2,theatreloc,s});
 
         
 

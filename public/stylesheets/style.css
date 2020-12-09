@@ -197,3 +197,30 @@ a.linkframe:hover{
   background:white;
   display:none;
 }
+#showscreens{
+  margin-top:120px;
+  margin-left:300px;
+  font-weight: 900;
+}
+#insertscreen{
+  width: 40%;
+  margin-top:20px;
+  margin-left:380px;
+  height:150px ;
+  background:white;
+  display:none;
+}
+.deleteconfirm4{
+  height:400;
+  width:600px;
+  display:none;
+}
+#insertshows{
+  width: 40%;
+  margin-top:20px;
+  margin-left:380px;
+  height:150px ;
+  background:white;
+  color:black;
+  display:none;
+}

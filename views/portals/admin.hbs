@@ -58,7 +58,7 @@
      {{this.Contact_No}}
  </td>
  <td>
-     <button id="inputdeletebutton" onclick="showconfirm2({{this.Theatre_id}})">
+     <button id="inputdeletebutton{{this.Theatre_id}}" onclick="showconfirm2({{this.Theatre_id}})">
          Delete
      </button>
  </td>
@@ -141,7 +141,7 @@
      {{this.Language}}
  </td>
  <td>
-     <button id="moviedeletebutton" style="width:80px" onclick="showconfirm3({{this.Movie_id}})">
+     <button id="moviedeletebutton{{this.Movie_id}}" style="width:80px" onclick="showconfirm3({{this.Movie_id}})">
          Delete
      </button>
  </td>
